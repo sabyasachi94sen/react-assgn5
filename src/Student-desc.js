@@ -78,7 +78,7 @@ const Studentdesc=()=>{
 
    const studentData=()=>{
      var len;
-    if(path==undefined )
+    if(path===undefined )
     len=students.length;
     else
     len=path;
@@ -98,7 +98,7 @@ const Studentdesc=()=>{
       
       
        }
-        if(path==undefined)
+        if(path===undefined)
        setStudents([...students,tempObj])
        else
        {
@@ -115,7 +115,7 @@ const Studentdesc=()=>{
 
    var inputVal=[];
  
-   if(path==undefined)
+   if(path===undefined)
    {
    inputVal[0]=[{Name:"",Age:"",Course:"",Batch:""}];
   
