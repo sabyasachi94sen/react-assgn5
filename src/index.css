@@ -72,7 +72,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color:white;
+ 
 }
 p{
   cursor: pointer;
@@ -86,7 +86,7 @@ p{
 .contact-wrap{
 
   width:100%;
-  height:100vh;
+  height:400vh;
   background-image: linear-gradient(skyblue 10%,pink 90%);
   text-align: center;
   
@@ -95,7 +95,7 @@ p{
 
 .home-wrap{
   width:100%;
-  height:100vh;
+  height:400vh;
   background-image: linear-gradient(skyblue 10%,pink 90%);
   text-align: center;
 
@@ -106,7 +106,7 @@ p{
 }
 .student-wrap{
   width:100%;
-  height:100vh;
+  height:400vh;
   background-image: linear-gradient(skyblue 10%,pink 90%);
 
 

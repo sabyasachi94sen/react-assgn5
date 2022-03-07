@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import MaterialTable from "material-table";
-import {Link,useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { StudentContext } from './StudentContext';
+
 import "./index.css";
 
 
@@ -8,14 +10,11 @@ import "./index.css";
 
 const Student=()=>{
 
+    var [students]=useContext(StudentContext);
+    
 
-    const data=[
-        {Name:"John",Age: "26", Course: "MERN" ,Batch:"October",Change : <Link to="/student-desc">Edit</Link> },
-        {Name:"Doe",Age: "25", Course: "MERN" ,Batch:"November",Change : <Link to="/student-desc" >Edit</Link>},
-        {Name:"Biden",Age: "26", Course: "MERN" ,Batch:"September",Change : <Link to="/student-desc" >Edit</Link>},
-        {Name:"Barar",Age: "22", Course: "MERN" ,Batch:"September",Change : <Link to="/student-desc" >Edit</Link>},
-        {Name:"Choel",Age: "23", Course: "MERN" ,Batch:"December",Change : <Link to="/student-desc" >Edit</Link>},
-        {Name:"Barack",Age: "24", Course: "MERN" ,Batch:"October",Change : <Link to="/student-desc" >Edit</Link>} ]
+
+  
 
         const columns=[
             {title : "Name",field: "Name"},
@@ -27,19 +26,6 @@ const Student=()=>{
 
             
         ]
-
-    var location=useLocation();
-    console.log(location.state);
-
-    if(location.state!=null)
-    {
-
-    var x=location.state.newData;
-    data.push(x);  
-    console.log(data); 
-
-    
-    }
 
 
    
@@ -61,7 +47,7 @@ const Student=()=>{
             </div>
 
             <MaterialTable title="" style={{width:"60%",margin:"auto" ,position:"relative",top: "40px" ,height:"50"}}
-            data={data}
+            data={students}
             columns={columns}
             options={{search:false,
             paging:false}} />
